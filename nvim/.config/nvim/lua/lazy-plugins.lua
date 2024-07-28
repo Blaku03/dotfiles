@@ -22,31 +22,32 @@ require('lazy').setup({
   --  This is equivalent to:
   --    require('Comment').setup({})
 
-  -- "gc" to comment visual regions/lines
-  --{ 'numToStr/Comment.nvim', opts = {} },
-
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
-  require 'kickstart/plugins/gitsigns',
+  require 'blaku/plugins/gitsigns',
 
-  require 'kickstart/plugins/which-key',
+  require 'blaku/plugins/which-key',
 
-  require 'kickstart/plugins/telescope',
+  require 'blaku/plugins/telescope',
 
-  require 'kickstart/plugins/lspconfig',
+  require 'blaku/plugins/lspconfig',
 
-  require 'kickstart/plugins/conform',
+  require 'blaku/plugins/conform',
 
-  require 'kickstart/plugins/cmp',
+  require 'blaku/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
+  require 'blaku/plugins/colorscheme',
 
-  require 'kickstart/plugins/todo-comments',
+  require 'blaku/plugins/todo-comments',
 
-  require 'kickstart/plugins/mini',
+  require 'blaku/plugins/mini',
 
-  require 'kickstart/plugins/treesitter',
+  require 'blaku/plugins/treesitter',
+
+  require 'blaku/plugins/neo-tree',
+
+  require 'blaku/plugins/comments',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -61,7 +62,6 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
