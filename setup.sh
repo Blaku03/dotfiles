@@ -19,13 +19,12 @@
 #     zlib1g-dev \
 #     libncurses5-dev \
 #     libgdbm-dev \
-#     tmux \
 #     snapd \
 #     make \
 #     gcc  \
 #     ripgrep \ 
 #     unzip \ 
-#     xclip \
+#     xclip 
 
 #git submodule update --init --recursive
 
@@ -60,13 +59,12 @@
 #echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
 #curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
 #sudo apt update
-#sudo apt install fish -y
+#sudo apt install fish exa -y
 #chsh -s /usr/bin/fish
 
 # Install fisher
 #fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
-#fish -c "fisher install jethrokuan/z"
-#fish -c "fisher install nakulj/auto-venv"
+#fish -c "fisher update"
 
 # Install startship
 #curl -sS https://starship.rs/install.sh | sh
