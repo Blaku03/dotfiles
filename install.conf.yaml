@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/starship.toml: 
+      create: true
+      path: starship/starship.toml
+    ~/.config/kitty/kitty.conf:
+      create: true
+      path: kitty/kitty.conf
+    ~/.config/fish:
+      create: true
+      path: fish/**
+      glob: true
+    ~/.config/tmux/tmux.conf:
+      create: true
+      path: tmux/tmux.conf
+    ~/.config/nvim:
+      create: true
+      path: nvim/**
+      glob: true
