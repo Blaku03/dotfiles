@@ -22,3 +22,7 @@
       create: true
       path: nvim/**
       glob: true
+    ~/.config/zellij/config.kdl:
+      create: true
+      path: zellij/config.kdl
+

@@ -19,7 +19,13 @@
 #     zlib1g-dev \
 #     libncurses5-dev \
 #     libgdbm-dev \
-#     tmux
+#     tmux \
+#     snapd \
+#     make \
+#     gcc  \
+#     ripgrep \ 
+#     unzip \ 
+#     xclip \
 
 #git submodule update --init --recursive
 
@@ -64,3 +70,19 @@
 
 # Install startship
 #curl -sS https://starship.rs/install.sh | sh
+
+# Run the dofiles symlink
+#./install
+
+# Install zellij
+#snap install zellij --classic
+
+# Installation of nvim
+#curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+#sudo rm -rf /opt/nvim-linux64
+#sudo mkdir -p /opt/nvim-linux64
+#sudo chmod a+rX /opt/nvim-linux64
+#sudo tar -C /opt -xzf nvim-linux64.tar.gz
+
+# make it available in /usr/local/bin, distro installs to /usr/bin
+#sudo ln -sf /opt/nvim-linux64/bin/nvim /usr/local/bin/
