@@ -1,20 +1,23 @@
 format = """
-[░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
+[](fg:#394260 bg:#212736)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
+$git_commit\
+$git_state\
 $nodejs\
 $rust\
 $golang\
-$php\
+$python\
+\n$character"""
+
+right_format = """
 [](fg:#212736 bg:#1d2230)\
 $time\
-[ ](fg:#1d2230)\
-\n$character"""
+[ ](fg:#1d2230)"""
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
@@ -29,12 +32,29 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+format = " [$symbol$branch]($style) "
+style = "bold yellow"
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count} "
+behind = "🐢 ×${count} "
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+untracked = "🛤️  ×${count} "
+stashed = "📦 "
+modified = "📝 ×${count} "
+staged = "🗃️  ×${count} "
+renamed = "📛 ×${count} "
+deleted = "🗑️  ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
 [nodejs]
 symbol = ""
@@ -51,13 +71,13 @@ symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
-[php]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+[python]
+symbol = "🐍 "
+style = "bold green"
+format = 'via [${symbol}(${version} )(\($virtualenv\) )]($style)'
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
+time_format = "%T" # Hour:Minute Format
 style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+format = '[[ 🕙 $time ](fg:#a0a9cb bg:#1d2230)]($style)'
