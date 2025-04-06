@@ -12,3 +12,9 @@ if status is-interactive
         zellij attach Blaku || zellij --session Blaku  # Attach to "Blaku" or create it if it doesn't exist
     end
 end
+
+# Run program in background and redirect the logs
+function back
+    nohup $argv >/dev/null 2>&1 &
+end
+
