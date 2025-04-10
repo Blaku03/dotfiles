@@ -22,11 +22,14 @@
 #     snapd \
 #     make \
 #     gcc  \
-#     ripgrep \ 
-#     unzip \ 
-#     xclip 
+#     ripgrep \
+#     unzip \
+#     xclip
 
 #git submodule update --init --recursive
+
+# Run the dofiles symlink
+#./install
 
 # Create fonts directory
 #FONT_DIR="$HOME/.local/share/fonts"
@@ -49,6 +52,10 @@
 
 #echo "Fonts installed successfully!"
 
+# Remove downloaded fonts
+#rm JetBrainsMono.tar.xz
+#rm FiraCode.tar.xz
+
 # Download kitty
 #curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
@@ -68,9 +75,6 @@
 
 # Install startship
 #curl -sS https://starship.rs/install.sh | sh
-
-# Run the dofiles symlink
-#./install
 
 # Install zellij
 #snap install zellij --classic
